@@ -17,7 +17,7 @@ include(cmake/EnableGTest.cmake)
 enable_gtest()
 
 include (cmake/IncludeProjB.cmake)
-include_proj_a()
+include_proj_b()
 
 # Include sub-projects.
 add_subdirectory ("${CMAKE_CURRENT_LIST_DIR}/libraries")

@@ -1,5 +1,5 @@
 
-macro(include_proj_a)
+macro(include_proj_b)
     include(FetchContent)
     FetchContent_Declare(
         ProjB
@@ -12,4 +12,4 @@ macro(include_proj_a)
     if(NOT ProjB_POPULATED)
         FetchContent_MakeAvailable(ProjB)
     endif()
-endmacro(include_proj_a)
+endmacro(include_proj_b)
