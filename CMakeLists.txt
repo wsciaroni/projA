@@ -16,11 +16,20 @@ endif(MSVC)
 include(cmake/EnableGTest.cmake)
 enable_gtest()
 
-include (cmake/IncludeProjB.cmake)
-include_proj_b()
-
 # Include sub-projects.
 add_subdirectory ("${CMAKE_CURRENT_LIST_DIR}/libraries")
 add_subdirectory ("${CMAKE_CURRENT_LIST_DIR}/applications")
 
 add_subdirectory ("${CMAKE_CURRENT_LIST_DIR}/tests")
+
+set(proja_POPULATED ON)
+set(proja_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR})
+set(proja_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
+FetchContent_SetPopulated(
+    ProjA
+    SOURCE_DIR ${proja_SOURCE_DIR}
+    BINARY_DIR ${proja_BINARY_DIR}
+)
+
+include (cmake/IncludeProjB.cmake)
+include_proj_b()
