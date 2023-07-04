@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.24)
 
 project(ProjA
-    VERSION 0.0.0
+    VERSION 0.0.2
 )
 
 # GoogleTest requires at least C++14
