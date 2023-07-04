@@ -6,6 +6,6 @@ file(GLOB_RECURSE UTILITY_LIB_SOURCES
     "${CMAKE_CURRENT_LIST_DIR}/source/*.cpp"
 )
 
-add_library(utilityLib STATIC ${UTILITY_LIB_SOURCES})
+add_library(utilityLibA STATIC ${UTILITY_LIB_SOURCES})
 
-target_include_directories(utilityLib PUBLIC "${CMAKE_CURRENT_LIST_DIR}/include")
+target_include_directories(utilityLibA PUBLIC "${CMAKE_CURRENT_LIST_DIR}/include")
