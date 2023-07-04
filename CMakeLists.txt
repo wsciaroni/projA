@@ -16,6 +16,9 @@ endif(MSVC)
 include(cmake/EnableGTest.cmake)
 enable_gtest()
 
+include (cmake/IncludeProjB.cmake)
+include_proj_a()
+
 # Include sub-projects.
 add_subdirectory ("${CMAKE_CURRENT_LIST_DIR}/libraries")
 add_subdirectory ("${CMAKE_CURRENT_LIST_DIR}/applications")
