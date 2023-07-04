@@ -3,7 +3,7 @@ macro(include_proj_b)
     include(FetchContent)
     FetchContent_Declare(
         ProjB
-        GIT_REPOSITORY git@github.com:wsciaroni/projB.git
+        GIT_REPOSITORY https://github.com/wsciaroni/projB.git
         GIT_TAG master
     )
 
